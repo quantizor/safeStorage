@@ -18,7 +18,7 @@
 
             Object.defineProperty( window[types[ii]], 'setItem', {
                 enumerable: false, // ensures you can't loop over this function accidentally
-                value: function() {
+                value: function () {
 
                     try { Storage.prototype.setItem.apply( this, arguments ); }
                     catch (e) { console.warn(e); }
